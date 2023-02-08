@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Microsoft Homepage</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="microsoft.css">
+
+        <style>
+            
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20 px 0px;
+}
+
+.logo img{
+    width: 160px;
+}
+.menu-left{
+    display: flex;
+    padding-left: 5px;
+    flex:1
+}
+
+.menu-right{
+    display: flex;
+
+}
+.nav-bar ul li{
+    padding: 0px 10px;
+}
+
+.main-area{
+    width: 100%;
+    height: 520px;
+    background: url("area.webp") no-repeat center center/cover; 
+    display: flex;
+    align-items: left;
+    text-align: left;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-bottom: 120px;
+    margin-bottom: 20px;
+}
+
+.inner-content{
+    margin-left:30px;
+    width: 35%;
+}
+
+.inner-content h1, .inner-content p{
+    margin-bottom: 20px;
+}
+.inner-content h1{
+    font-size: 42px;
+}
+
+.btn{
+    background-color: black;
+    color:white;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    margin-bottom: 35px;
+    margin: 20px;
+}
+.cards img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cards h1{
+    margin-bottom: 10px;
+}
+
+.cards p{
+    margin-bottom: 10px;
+}
+
+.cards a, .cards i{
+    color:#006788;
+    padding-bottom: 5px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="logo"><img src="logo.png" alt=""></div>
+                <ul class="menu-left">
+                    <li><a href="#">Microsoft 365</a></li>
+                    <li><a href="#">Office</a></li>
+                    <li><a href="#">Windows</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                </ul>
+                <ul class="menu-right">
+                    <li><a href="#">Все продукты Microsoft</a>
+                    <i class="fas fa-chevron-down"></i></li>
+                    <li><a href="#">Поиск</a>
+                    <i class="fas fa-search"></i></li>
+                    <li><a href="#">Корзина</a>
+                    <i class="fas fa-shopping-cart"></i></li>
+                    <li><a href="#">Войти</a>
+                    <i class="fas fa-user-circle"></i></li>
+                </ul>
+            </nav>
+            <header class="main-area">
+                <div class="inner-content">
+                    <h1>New Microsoft 365</h1>
+                    <p>Приложение Office премиум, дополнительное облачное хранилище,продвинутые инструменты обеспечения безопасности-все в одной удобной подписке</p>
+                    <a class="btn" href="#">До 6 человек</a>
+                    <i class="fas fa-chevron-right" style="margin-right:30px"></i>
+                    <a href="#">Для 1 человека</a>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </header>
+
+            <section class="cards">
+                <div >
+                    <img src="teams.webp" alt="teams">
+                    <h3>Microsoft Teams</h3>
+                    <p>Общайтесь, проводите собрания,звоните и сотрудничайте.</p>
+                    <a href="#">Подробнее<i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div>
+                    <img src="edge.webp" alt="teams">
+                    <h3>Microsoft Edge</h3>
+                    <p>Потрясающая производительность, больше конфиденциальности, продуктивности и дополнительных возможностей.</p>
+                    <a href="#">Подробнее<i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div>
+                    <img src="onedrive.webp" alt="teams">
+                    <h3>Microsoft OneDrive</h3>
+                    <p>Сохраняйте свои файлы и фотографии на OneDrive - они будут доступны с любого устройства и где угодно.</p>
+                    <a href="#">Подробнее<i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div>
+                    <img src="ww.webp" alt="teams">
+                    <h3>Обновление Windows 10</h3>
+                    <p>Предоставляя новые функции, которые помогут вам узнать больше, общаться чаще и экономить время..</p>
+                    <a href="#">Узнать больше<i class="fas fa-chevron-right"></i></a>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
