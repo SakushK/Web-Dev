@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Instagram</title>
+  <link rel="stylesheet" type="text/css" href="instagram.css">
+
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /*border: 1px solid red;*/
+      }
+      
+    body {
+        background-color: #fafafa;
+        font-family: Helvetica, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    .wrapper {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+      }
+      
+    .left {
+        position: relative;
+      }
+      
+    .screen {
+        position: absolute;
+        left: 150px;
+        top: 100px;
+      }
+      
+    .panel {
+        width: 350px;
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-radius: 2px;
+        padding: 20px 40px;
+        margin: 5px 0;
+        display: flex;
+      }
+      
+    .login {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    #logo {
+        width: 65%;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    .input-box {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fafafa;
+        border: 1px solid #dedede;
+        border-radius: 2px;
+      }
+      
+    .input-box::placeholder {
+        color: #8a8a8a;
+        font-size: 12px;
+      }
+      
+    .input-box:focus {
+        outline: none;
+        border: 1px solid #8a8a8a;
+      }
+      
+    .button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 7px 0;
+        background-color: #b2dffc;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        font-size: 14px;
+      }
+      
+    .divider {
+        display: flex;
+        width: 100%;
+        font-size: 12px;
+        color: #8a8a8a;
+        font-weight: bold;
+        gap: 20px;
+        align-items: center;
+      }
+      
+    .line {
+        flex: 1;
+        height: 1px;
+        background-color: #8a8a8a;
+      }
+    .dif .fb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dif .fb img{
+        width: 16px;
+        height: 16px;
+    }
+    .dif  .fb p{
+        color: var(--txt-second-color);
+        font-weight: 500;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    .dif .forgot{
+        font-size: 12px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .dif .forgot a{
+        color: var(--txt-second-color);
+    }
+      
+    .forgot {
+        color: #000;
+        text-decoration: none;
+        font-size: 12px;
+        text-align: center;
+      }
+      
+    .signup {
+        justify-content: center;
+        gap: 5px;
+        font-size: 14px;
+      }
+      
+    .signup a {
+        color: #3bb1ff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+    .apps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+        margin: 20px 0;
+      }
+      
+    .app-stores {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      
+    .app-stores img {
+        width: 140px;
+        height: auto;
+      }
+
+    .footer {
+        padding-bottom: 52px;
+        padding-top: 24px;
+    }
+    
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: var(--txt-second-color);
+        font-size: 13px;
+        line-height: 18px;
+        margin: 0 8px 12px 8px;
+    }
+
+    .copyright {
+        padding: 12px 0;
+        color: var(--txt-second-color);
+        font-size: 13px;
+        line-height: 18px;
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="left">
+      <img src="phones.png" alt="phone">
+      <img class="screen" src="screen.jpg" alt="phone-screen">
+    </div>
+    <div class="right">
+      <div class="panel login">
+        <img id="logo" src="instagram-logo.png" alt="logo">
+        <form>
+          <input
+            class="input-box"
+            type="text"
+            name="username"
+            required
+            placeholder="Номер телефона, имя пользователя или...">
+          <input
+            class="input-box"
+            type="password"
+            name="password"
+            required
+            placeholder="Пароль">
+          <input
+            class="button"
+            type="submit"
+            name="login"
+            value="Войти">
+          <div class="divider">
+            <div class="line"></div>
+            <p>ИЛИ</p>
+            <div class="line"></div>
+          </div>
+          <div class=dif>
+                <div class="fb"><br><br>
+                    <img src="facebook.png" alt="facebook">
+                    <p><a href="#">Войти через Facebook</a></p>
+                </div>
+                <div class="forgot">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+            
+        </div>
+        </form>
+      </div>
+      <div class="panel signup">
+        <p>У вас ещё нет аккаунта?</p>
+        <a href=#>Зарегистрироваться</a>
+      </div>
+      <div class="apps">
+        <p>Установите приложение.</p>
+        <div class="app-stores">
+          <img src="app-store.svg" alt="App Store">
+          <img src="play-store.svg" alt="Play Store">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="links">
+        <a href="#">Информация</a>
+        <a href="#">Блог</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Помощь</a>
+        <a href="#">API</a>
+        <a href="#">Конфидициальность</a>
+        <a href="#">Условия</a>
+        <a href="#">Популярные аккаунты</a>
+        <a href="#">Хэштеги</a>
+        <a href="#">Места</a>
+        <a href="#" id="darkmode-toggle">Darkmode</a>
+    </div>
+    <div class="copyright">
+        © 2021 Instagram от Facebook
+    </div>
+</div>
+</div>
+
+</body>
+</html>
