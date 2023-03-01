@@ -1,0 +1,29 @@
+<!-- <p>product-item works!</p> -->
+<div *ngFor="let product of products">
+    <div *ngIf="product.category==selectedproduct">
+
+        <!-- <h2>Categories:</h2> -->
+
+        <h3>
+            <a [title]="product.name + 'details'">
+                {{product.name}}
+            </a>
+        </h3>
+
+        <img src="{{product.img}}" style="width: 20%; height:20%;">
+        <p *ngIf="product.price">Price: {{ product.price }}</p>
+        <p *ngIf="product.rating">Rating: {{ product.rating }}</p>
+        <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+        <button type="button" (click)="likes(product)">Like | {{product.like}}</button> 
+        <button type="button" (click)="remove(product)">Remove</button> 
+        <button type="button" (click)="share(product.url)"> 
+          Share 
+        </button> 
+
+        <app-product-alerts
+            [product]="product" 
+            (notify)="onNotify()">
+        </app-product-alerts>
+    </div>
+</div>
