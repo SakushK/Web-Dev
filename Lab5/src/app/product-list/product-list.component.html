@@ -1,0 +1,12 @@
+<h2>Categories:</h2>
+
+<button type="button" (click)="onSelect('<obile_phones>')" style="padding:10px; margin-right: 10px;">Mobile Phones</button>
+<button type="button" (click)="onSelect('Laptop')"style="padding:10px; margin-right: 10px;">Laptop</button>
+<button type="button" (click)="onSelect('Tv')"style="padding:10px; margin-right: 10px;">Tv</button>
+<button type="button" (click)="onSelect('Appliances')"style="padding:10px; margin-right: 10px;">Appliances</button>
+<app-product-item [selectedproduct]="selectedProduct"style="padding:10px; margin-right: 10px;"> </app-product-item>
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
