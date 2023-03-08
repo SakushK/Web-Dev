@@ -1,0 +1,10 @@
+<div style="display: flex; flex-direction: column;">
+<div *ngFor="let item of data" style="">
+    <div> Id: {{item.id}} </div>
+    <div> Title: <a [routerLink]="['/albums', item.id]">{{item.title}}</a> </div>
+    <div> User: {{item.userId}} </div>
+    <button type="button" (click)="delete(item)">Delete</button>
+    <hr>
+
+</div>
+</div>
