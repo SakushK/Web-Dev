@@ -1,0 +1,6 @@
+<p>album-detail works!</p>
+<input id="input" value="{{data.title}}"><button type="button" (click)="save()">Save</button><button type="button" (click)="return()">Return back</button>
+<div>Id: {{data.id}}</div>
+<div>Title: {{data.title}}</div>
+<div>User: {{data.userId}}</div>
+<a [routerLink]="['/albums', data.id, 'photos' ]">Go to Photos</a>
